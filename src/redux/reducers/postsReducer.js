@@ -11,7 +11,7 @@ const postsReducer = (state = defaultState.posts, action) => {
     case FETCH_POSTS_SUCCESS:
       return {
         ...state,
-        entries: action.payload
+        entries: action.payload.posts
       };
 
     case DELETE_POST_SUCCESS:
@@ -31,7 +31,7 @@ const postsReducer = (state = defaultState.posts, action) => {
     case FETCH_OWNER_SUCCESS:
       return {
         ...state,
-        userEntry: action.payload.post
+        userEntry: action.payload
       };
 
     default:

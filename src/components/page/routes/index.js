@@ -9,7 +9,7 @@ import InvalidRoute from "./invalidRoute";
 export default (
   <Switch>
     <Route exact path="/" component={PostList} />
-    <Route exact path="/:postId" component={PostEntry} />
+    <Route exact path="/posts/:postId" component={PostEntry} />
 
     <Route component={InvalidRoute} />
   </Switch>

@@ -16,13 +16,20 @@ const Nav = ({ resetData, isLoading, classes }) => {
           gutter={16}
           style={{ height: "100%" }}
         >
-          <Col>
-            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-            Testerino
+          <Col className={classes.flex}>
+            <Avatar
+              className={classes.icon}
+              src="https://icon2.kisspng.com/20180720/jaa/kisspng-text-naruto-sticker-logo-idcard-5b51c236763454.8572265815320847904842.jpg"
+            />
+            <div>Posterino</div>
           </Col>
-          <Col>
-            <Button disabled={isLoading} onClick={resetData}>
-              should be to the right
+          <Col className={classes.flexRight}>
+            <Button
+              className={classes.button}
+              disabled={isLoading}
+              onClick={resetData}
+            >
+              Default data
             </Button>
           </Col>
         </Row>

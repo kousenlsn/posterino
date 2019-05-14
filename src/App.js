@@ -26,7 +26,7 @@ class App extends React.Component {
                   <ToastContainer />
                 </Layout>
                 <Layout.Footer style={{ textAlign: "center" }}>
-                  Testerino ©2019 Created by GLuersen
+                  Posterino ©2019 Created by GLuersen
                 </Layout.Footer>
               </Layout>
             </Layout>

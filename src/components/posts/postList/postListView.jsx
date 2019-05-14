@@ -32,15 +32,18 @@ const PostList = ({ isLoading, posts, classes }) => {
                 renderItem={item => (
                   <List.Item
                     key={item.Id}
-                    actions={[<Link to={`/${item.id}?edit=true`}>edit</Link>]}
+                    actions={[
+                      <Link to={`/posts/${item.id}?edit=true`}>edit</Link>
+                    ]}
                   >
                     <List.Item.Meta
+                      className={classes.listEntryContainer}
                       title={
-                        <Link to={`/${item.id}`}>
+                        <Link to={`/posts/${item.id}`}>
                           <span className={classes.title}>
                             {item.title} &nbsp;
                           </span>
-                          <span className={classes.subTitle}>
+                          <span className={classes.subtitle}>
                             post #{item.id}
                           </span>
                         </Link>

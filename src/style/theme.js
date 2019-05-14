@@ -1,11 +1,11 @@
 const theme = {
-  primaryColor: "orange !important",
-  primaryColorHover: "rgb(223, 189, 126) !important",
-  secondaryColor: "black !important",
-  tertiaryColor: "white !important",
+  primaryColor: "#ee7441 !important",
+  primaryColorHover: "#ff9900 !important",
+  secondaryColor: "#42519e !important",
+  secondaryColorHover: "#0c2edf !important",
 
-  dark: "black !important",
-  paper: "white !important"
+  dark: "#0b0b0b !important",
+  paper: "#fff !important"
 };
 
 export default theme;

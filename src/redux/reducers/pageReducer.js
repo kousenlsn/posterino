@@ -13,17 +13,27 @@ const pageReducer = (state = defaultState.page, action) => {
   switch (actionType(action.type)) {
     case "FETCH": {
       switch (actionStatus(action.type)) {
-        case "_REQUEST":
+        case "REQUEST":
           return {
             ...state,
             fetchCallsInProgress: state.fetchCallsInProgress + 1
           };
-        case "_SUCCESS":
+        case "SUCCESS":
           return {
             ...state,
-            fetchCallsInProgress: state.fetchCallsInProgress - 1
+            fetchCallsInProgress: state.fetchCallsInProgress - 1,
+            notificationMessages:
+              action.payload.message && action.payload.message.length > 1
+                ? [
+                    ...state.notificationMessages,
+                    {
+                      key: new Date().toISOString().replace(/-/g, ""),
+                      message: action.payload.message
+                    }
+                  ]
+                : state.notificationMessages
           };
-        case "_FAILURE":
+        case "FAILURE":
           return {
             ...state,
             fetchCallsInProgress: state.fetchCallsInProgress - 1,
@@ -45,12 +55,12 @@ const pageReducer = (state = defaultState.page, action) => {
     }
     case "PERSIST": {
       switch (actionStatus(action.type)) {
-        case "_REQUEST":
+        case "REQUEST":
           return {
             ...state,
             postCallsInProgress: state.postCallsInProgress + 1
           };
-        case "_SUCCESS":
+        case "SUCCESS":
           return {
             ...state,
             postCallsInProgress: state.postCallsInProgress - 1,
@@ -65,7 +75,7 @@ const pageReducer = (state = defaultState.page, action) => {
                   ]
                 : state.notificationMessages
           };
-        case "_FAILURE":
+        case "FAILURE":
           return {
             ...state,
             postCallsInProgress: state.postCallsInProgress - 1,

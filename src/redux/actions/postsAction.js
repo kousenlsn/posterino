@@ -15,11 +15,12 @@ import {
   FETCH_OWNER_FAILURE
 } from "./actionTypes";
 
-const UNAVAILABLE_SERVICE_MESSAGE = "Serviço indisponivel, tente novamente.";
-const MOCKED_DELAY = 250;
+const UNAVAILABLE_SERVICE_MESSAGE =
+  "Unable to reach the service, please try again later.";
+const MOCKED_DELAY = 400;
 
-export function fetchPostsSuccess(posts) {
-  return { type: FETCH_POSTS_SUCCESS, payload: posts };
+export function fetchPostsSuccess(result) {
+  return { type: FETCH_POSTS_SUCCESS, payload: result };
 }
 export function fetchPostsRequest() {
   return { type: FETCH_POSTS_REQUEST };
@@ -28,14 +29,19 @@ export function fetchPostsFailure(error) {
   return { type: FETCH_POSTS_FAILURE, payload: error };
 }
 
-export function fetchPosts() {
+export function fetchPosts(notify) {
   return async dispatch => {
     dispatch(fetchPostsRequest());
 
     try {
       let result = await axios.get("http://jsonplaceholder.typicode.com/posts");
 
-      return dispatch(fetchPostsSuccess(result.data));
+      return dispatch(
+        fetchPostsSuccess({
+          posts: result.data,
+          message: notify && "Successfully updated data."
+        })
+      );
     } catch (error) {
       return dispatch(
         fetchPostsFailure(
@@ -99,7 +105,18 @@ export function persistPost(post) {
       // MOCKED PERSIST
       return await new Promise(resolve => {
         setTimeout(() => {
-          resolve(dispatch(persistPostSuccess(post)));
+          const nextPost = Object.assign({}, post, {
+            title: post.title.trim(" ")
+          });
+
+          resolve(
+            dispatch(
+              persistPostSuccess({
+                post: nextPost,
+                message: "Successfully saved post."
+              })
+            )
+          );
         }, MOCKED_DELAY);
       });
     } catch (error) {
@@ -114,8 +131,8 @@ export function persistPost(post) {
   };
 }
 
-export function fetchPostOwnerSuccess(posts) {
-  return { type: FETCH_OWNER_SUCCESS, payload: posts };
+export function fetchPostOwnerSuccess(user) {
+  return { type: FETCH_OWNER_SUCCESS, payload: user };
 }
 export function fetchPostOwnerRequest() {
   return { type: FETCH_OWNER_REQUEST };
@@ -126,14 +143,14 @@ export function fetchPostOwnerFailure(error) {
 
 export function fetchPostOwner(userId) {
   return async dispatch => {
-    dispatch(fetchPostOwnerSuccess());
+    dispatch(fetchPostOwnerRequest());
 
     try {
       let result = await axios.get(
         `http://jsonplaceholder.typicode.com/users/${userId}`
       );
 
-      return dispatch(fetchPostOwnerRequest(result.data));
+      return dispatch(fetchPostOwnerSuccess(result.data));
     } catch (error) {
       return dispatch(
         fetchPostOwnerFailure(

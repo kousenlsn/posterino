@@ -23,15 +23,29 @@ const styles = theme => ({
     }
   },
 
+  listEntryContainer: {
+    minWidth: 0,
+    "& .ant-list-item-meta-content": {
+      minWidth: 0
+    },
+    "& .ant-list-item-meta-title": {
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    }
+  },
   title: {
     fontSize: 20
   },
   subtitle: {
     fontSize: 15,
-    opacity: 0.8
+    opacity: 0.6
   },
   description: {
-    color: "blue"
+    color: theme.primaryColor,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap"
   }
 });
 

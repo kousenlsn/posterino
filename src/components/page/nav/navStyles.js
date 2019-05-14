@@ -8,18 +8,34 @@ const styles = theme => ({
     height,
     paddingLeft: 30,
     paddingRight: 30,
-    color: "blue"
-  }
+    backgroundColor: theme.dark
+  },
 
-  //   button: {
-  //     width: "100%",
-  //     backgroundColor: theme.primaryColor,
-  //     borderColor: theme.primaryColor,
-  //     "&:hover": {
-  //       backgroundColor: theme.primaryColorHover,
-  //       borderColor: theme.primaryColorHover
-  //     }
-  //   },
+  flex: {
+    display: "flex",
+    alignItems: "center",
+    color: theme.paper
+  },
+  flexRight: {
+    flexGrow: 1,
+    textAlign: "right"
+  },
+
+  icon: {
+    backgroundColor: theme.dark,
+    marginRight: 5
+  },
+
+  button: {
+    backgroundColor: theme.secondaryColor,
+    borderColor: theme.secondaryColor,
+    color: theme.paper,
+    "&:hover": {
+      backgroundColor: theme.secondaryColorHover,
+      borderColor: theme.secondaryColorHover,
+      color: theme.paper
+    }
+  }
 });
 
 export default styles;

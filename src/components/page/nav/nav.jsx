@@ -1,15 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { FETCH_POSTS_SUCCESS } from "../../../redux/actions/actionTypes";
 import { fetchPosts } from "../../../redux/actions/postsAction";
 import NavView from "./navView";
 
 class NavComponent extends React.Component {
-  resetData = async () => {
-    const result = await this.props.fetchPosts();
-
-    if (result.type === FETCH_POSTS_SUCCESS) this.props.history.push("/");
+  resetData = () => {
+    this.props.fetchPosts();
   };
 
   render() {
@@ -25,7 +22,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts())
+  fetchPosts: () => dispatch(fetchPosts(true))
 });
 
 export default connect(
