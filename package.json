@@ -1,5 +1,6 @@
 {
   "name": "posterino",
+  "description": "Knowledge test app, which can be used as boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

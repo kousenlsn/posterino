@@ -30,4 +30,4 @@ Also using [React-Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [Try access an invalid route](https://localhost:3000/posts/1500);
 - Try refresh the page after changing any state, it should keep the previous state;
 - Try disconnect from internet, then re-fetch data, it should toast a fail response from redux action;
-- [Check responsiveness of the pages](https://localhost:3000/posts/1);
+- [Check responsiveness of the pages](localhost:3000/posts/1);
