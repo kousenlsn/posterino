@@ -1,14 +1,18 @@
 ## Posterino
 
-Basic yet ninja front stack.
+*Basic orange ninja front stack.*
 
-### Setup
+Sample app developed for a job application.
+
+**Requirements were**: consult an endpoint for fetching mocked posts; edit and persist locally.
+
+### Setup :construction_worker:
 
 1. `npm install`
 2. `npm start`
 3. Open [http://localhost:3000](http://localhost:3000)
 
-### Composition
+### Composition :hammer:
 
 [Create React App](https://facebook.github.io/create-react-app/docs/getting-started) - Boilerplate <br/>
 [eslint](https://eslint.org/) (comes with Create react App) - Linting <br/>
@@ -22,12 +26,10 @@ Basic yet ninja front stack.
 [Moment](https://momentjs.com/) - Date time lib <br/>
 [Ant Design](https://ant.design/) - Material UI based visual lib <br/>
 [Rc Queue Anim](https://www.npmjs.com/package/rc-queue-anim) - Animation lib <br/><br/>
+Partially using [React-Hooks](https://reactjs.org/docs/hooks-intro.html).
 
-Also using [React-Hooks](https://reactjs.org/docs/hooks-intro.html)
-
-### Nuances
+### Nuances :mag_right:
 
 - [Try access an invalid route](http://localhost:3000/posts/1500);
 - Try refresh the page after changing any state, it should keep the previous state;
-- Try disconnect from internet, then re-fetch data, it should toast a fail response from redux action;
 - [Check responsiveness of the pages](http://localhost:3000/posts/1);
