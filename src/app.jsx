@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
@@ -22,7 +22,7 @@ class App extends React.Component {
       <>
         <Provider store={storeConfig.store}>
           <PersistGate loading={<div>loading</div>} persistor={storeConfig.persistor}>
-            <Router>
+            <HashRouter basename='/'>
               <ThemeProvider theme={posterinoTheme}>
                 <Layout>
                   <Nav />
@@ -38,7 +38,7 @@ class App extends React.Component {
                   </Layout>
                 </Layout>
               </ThemeProvider>
-            </Router>
+            </HashRouter>
           </PersistGate>
         </Provider>,
       </>
