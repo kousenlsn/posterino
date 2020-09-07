@@ -4,7 +4,7 @@
 
 Sample app developed for a job application.
 
-**Requirements were**: consult an endpoint for fetching mocked posts; edit and persist locally.
+**Requirements**: consult an endpoint for fetching mocked posts; edit and persist locally.
 
 ### Setup :construction_worker:
 
@@ -14,19 +14,19 @@ Sample app developed for a job application.
 
 ### Composition :hammer:
 
-- [Create React App](https://facebook.github.io/create-react-app/docs/getting-started) - Boilerplate <br/>
-- [eslint](https://eslint.org/) (comes with Create react App) - Linting <br/>
-- [Redux](https://react-redux.js.org/) - State management <br/>
-- [Redux-thunk](https://github.com/reduxjs/redux-thunk) - Async actions with redux <br/>
-- [Redux-persist](https://github.com/rt2zz/redux-persist) - Keeping the store state preserved on refreshes <br/>
-- [Redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) - Timetravel debugging tools for redux in Chrome <br/>
-- [React-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) - Routing for SPA with react <br/>
-- [React-jss](https://github.com/cssinjs/react-jss) - CSS in JS lib <br/>
-- [Axios](https://github.com/axios/axios) - HTTP request lib <br/>
-- [Moment](https://momentjs.com/) - Date time lib <br/>
-- [Ant Design](https://ant.design/) - Material UI based visual lib <br/>
-- [Rc Queue Anim](https://www.npmjs.com/package/rc-queue-anim) - Animation lib <br/><br/>
-- Partially using [React-Hooks](https://reactjs.org/docs/hooks-intro.html).
+- [Create React App](https://facebook.github.io/create-react-app/docs/getting-started) - Boilerplate
+- [eslint](https://eslint.org/) (comes with Create react App) - Linting
+- [Redux](https://react-redux.js.org/) - State management
+- [Redux-thunk](https://github.com/reduxjs/redux-thunk) - Async actions for redux
+- [Redux-persist](https://github.com/rt2zz/redux-persist) - Keeping the store state preserved between reloads
+- [Redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) - Timetravel debugging tools for redux
+- [React-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) - Routing for SPA with react
+- [React-jss](https://github.com/cssinjs/react-jss) - CSS in JS lib
+- [Axios](https://github.com/axios/axios) - HTTP request lib
+- [Moment](https://momentjs.com/) - Date time lib
+- [Ant Design](https://ant.design/) - Material UI based visual lib
+- [Rc Queue Anim](https://www.npmjs.com/package/rc-queue-anim) - Animation lib
+- Partially using [React-Hooks](https://reactjs.org/docs/hooks-intro.html). (containers with classes, components with functional components)
 
 ### Nuances :mag_right:
 
