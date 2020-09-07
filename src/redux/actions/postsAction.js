@@ -34,7 +34,7 @@ export function fetchPosts(notify) {
     dispatch(fetchPostsRequest());
 
     try {
-      let result = await axios.get("http://jsonplaceholder.typicode.com/posts");
+      let result = await axios.get("https://jsonplaceholder.typicode.com/posts");
 
       return dispatch(
         fetchPostsSuccess({
@@ -147,7 +147,7 @@ export function fetchPostOwner(userId) {
 
     try {
       let result = await axios.get(
-        `http://jsonplaceholder.typicode.com/users/${userId}`
+        `https://jsonplaceholder.typicode.com/users/${userId}`
       );
 
       return dispatch(fetchPostOwnerSuccess(result.data));
