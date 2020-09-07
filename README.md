@@ -2,7 +2,10 @@
 
 *Basic orange ninja front stack.*
 
-Sample app developed for a job application.
+![CI](https://github.com/kousenlsn/posterino/workflows/CI/badge.svg?branch=master&event=push)
+![CD](https://github.com/kousenlsn/posterino/workflows/CD/badge.svg)
+
+Quick sample app developed for a job application.
 
 **Requirements**: consult an endpoint for fetching mocked posts; edit and persist locally.
 
