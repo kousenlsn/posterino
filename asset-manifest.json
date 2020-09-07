@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/posterino/static/css/main.04c0ce95.chunk.css",
-    "main.js": "/posterino/static/js/main.acd559ea.chunk.js",
-    "main.js.map": "/posterino/static/js/main.acd559ea.chunk.js.map",
+    "main.js": "/posterino/static/js/main.4e81ea7e.chunk.js",
+    "main.js.map": "/posterino/static/js/main.4e81ea7e.chunk.js.map",
     "runtime-main.js": "/posterino/static/js/runtime-main.32a4f8d2.js",
     "runtime-main.js.map": "/posterino/static/js/runtime-main.32a4f8d2.js.map",
     "static/css/2.409ec117.chunk.css": "/posterino/static/css/2.409ec117.chunk.css",
     "static/js/2.f5d77c80.chunk.js": "/posterino/static/js/2.f5d77c80.chunk.js",
     "static/js/2.f5d77c80.chunk.js.map": "/posterino/static/js/2.f5d77c80.chunk.js.map",
     "index.html": "/posterino/index.html",
-    "precache-manifest.f63a3617fc56cfbf43c571fd74c5fb90.js": "/posterino/precache-manifest.f63a3617fc56cfbf43c571fd74c5fb90.js",
+    "precache-manifest.760ddc91b3ace2e5fe08cd81fff4d35e.js": "/posterino/precache-manifest.760ddc91b3ace2e5fe08cd81fff4d35e.js",
     "service-worker.js": "/posterino/service-worker.js",
     "static/css/2.409ec117.chunk.css.map": "/posterino/static/css/2.409ec117.chunk.css.map",
     "static/css/main.04c0ce95.chunk.css.map": "/posterino/static/css/main.04c0ce95.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.409ec117.chunk.css",
     "static/js/2.f5d77c80.chunk.js",
     "static/css/main.04c0ce95.chunk.css",
-    "static/js/main.acd559ea.chunk.js"
+    "static/js/main.4e81ea7e.chunk.js"
   ]
 }
