@@ -1,6 +1,6 @@
 ## Posterino
 
-*Simple React web app inbetween React and React Hooks.**
+*Simple React web app in between React and React Hooks.**
 
 ![CI](https://github.com/kousenlsn/posterino/workflows/CI/badge.svg?branch=master&event=push)
 ![CD](https://github.com/kousenlsn/posterino/workflows/CD/badge.svg)
